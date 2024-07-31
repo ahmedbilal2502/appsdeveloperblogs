@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: Testing Project
+info:
+  app:
+    name: Testing Project
+  java:
+    version: 17
+  type: Spring Boot
+ #Swagger configurations
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+  show-actuator: on
+#Actuctor Configurations
+management:
+  endpoints:
+    web:
+      base-path: /management
+      exposure:
+        include: health,info,beans,env,customactuator
+  info:
+    env:
+      enabled: on
+    build:
+      enabled: on
+    git:
+      enabled: on
+    java:
+      enabled: on
+    os:
+      enabled: on
