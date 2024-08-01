@@ -1,4 +1,4 @@
-package com.appsdeveloperblogs.app.ws;
+package com.appsdeveloperblogs.app.ws.examples;
 
 public class MaskPhoneNumber {
     public static String maskNumber(String phoneNumber) {

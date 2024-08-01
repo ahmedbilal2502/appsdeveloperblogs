@@ -1,9 +1,9 @@
-package com.appsdeveloperblogs.app.ws;
+package com.appsdeveloperblogs.app.ws.examples;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class ABC {
+public class LocalDateTimeTesting {
     public static void main(String[] args) {
         LocalDateTime currentDateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
