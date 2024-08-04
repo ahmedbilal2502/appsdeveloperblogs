@@ -1,54 +1,12 @@
 
 info:
   app:
-    name: Testing Project
+    name: Application Profile Project
   java:
     version: 17
   type: Spring Boot
-#DB configuration
 spring:
   application:
-    name: Testing Project
-  datasource:
-    url: jdbc:postgresql://localhost:5432/appsdeveloperblogs
-    username: postgres
-    password:
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: on
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-
-
-
-
-  #Swagger configurations
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
-  api-docs:
-    path: /api-docs
-  show-actuator: on
-#Actuctor Configurations
-management:
-  endpoints:
-    web:
-      base-path: /management
-      exposure:
-        include: health,info,beans,env,customactuator
-  info:
-    env:
-      enabled: on
-    build:
-      enabled: on
-    git:
-      enabled: on
-    java:
-      enabled: on
-    os:
-      enabled: on
-server:
-  port: 8090
+    name: Application Profile Project
+  profiles:
+    active: prod

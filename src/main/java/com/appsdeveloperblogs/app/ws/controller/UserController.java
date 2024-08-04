@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(UriConstants.USER_COLLECTION)
 @Tag(name = "User")
 @Hidden
+@Slf4j
 public class UserController {
 
     @Autowired
@@ -68,6 +70,7 @@ public class UserController {
     )
     public ResponseEntity<BaseResponse> getUser(@PathVariable(name = "userId") String userId) {
         BaseResponse response = userService.getUser(userId);
+        log.info("get User Response {} ",response);
         return new ResponseEntity<BaseResponse>(
                 response,
                 HttpStatus.valueOf(response.getResponseCode()));
