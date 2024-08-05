@@ -9,4 +9,4 @@ spring:
   application:
     name: Application Profile Project
   profiles:
-    active: prod
+    active: dev
