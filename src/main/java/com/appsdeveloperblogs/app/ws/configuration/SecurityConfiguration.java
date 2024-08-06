@@ -49,7 +49,7 @@ public class SecurityConfiguration {
                         req ->
                                 req.requestMatchers(WHITE_LIST_URL)
                                         .permitAll()
-                                        .requestMatchers("/api/v1/management/**")
+                                        .requestMatchers(GET,"/users")
                                         .authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(STATELESS))
