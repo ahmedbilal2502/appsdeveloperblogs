@@ -1,0 +1,51 @@
+24-08-06 22:47:03.904 [main] INFO  c.a.app.ws.MobileAppWsApplication - Starting MobileAppWsApplication using Java 17.0.6 with PID 30352 (C:\Users\Ahmed Bilal\Documents\Cources\Git Code\appsdeveloperblogs\target\classes started by Ahmed Bilal in C:\Users\Ahmed Bilal\Documents\Cources\Git Code\appsdeveloperblogs) 
+24-08-06 22:47:03.907 [main] INFO  c.a.app.ws.MobileAppWsApplication - The following 1 profile is active: "dev" 
+24-08-06 22:47:04.507 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+24-08-06 22:47:04.539 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces. 
+24-08-06 22:47:04.908 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+24-08-06 22:47:04.912 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+24-08-06 22:47:04.913 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+24-08-06 22:47:04.913 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18] 
+24-08-06 22:47:04.957 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+24-08-06 22:47:04.957 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1016 ms 
+24-08-06 22:47:05.105 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+24-08-06 22:47:05.134 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final 
+24-08-06 22:47:05.152 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+24-08-06 22:47:05.267 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+24-08-06 22:47:05.281 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+24-08-06 22:47:05.371 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2f4545c6 
+24-08-06 22:47:05.372 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+24-08-06 22:47:05.392 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+24-08-06 22:47:05.869 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+24-08-06 22:47:05.878 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000 
+24-08-06 22:47:05.878 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping 
+24-08-06 22:47:05.879 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000 
+24-08-06 22:47:05.879 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping 
+24-08-06 22:47:05.879 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000 
+24-08-06 22:47:05.879 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping 
+24-08-06 22:47:05.879 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000 
+24-08-06 22:47:05.879 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping 
+24-08-06 22:47:05.880 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000 
+24-08-06 22:47:05.880 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "users_seq" does not exist, skipping 
+24-08-06 22:47:05.915 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+24-08-06 22:47:06.106 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used. 
+24-08-06 22:47:06.516 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoint(s) beneath base path '/management' 
+24-08-06 22:47:06.554 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+24-08-06 22:47:06.742 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c9c375, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4de6c6b9, org.springframework.security.web.context.SecurityContextHolderFilter@4daf3b31, org.springframework.security.web.header.HeaderWriterFilter@2121d0ed, org.springframework.web.filter.CorsFilter@4f141a7, org.springframework.security.web.authentication.logout.LogoutFilter@768b79db, com.appsdeveloperblogs.app.ws.configuration.JwtAuthenticationFilter@53a52b3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76b11572, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10b60a9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@763d7eef, org.springframework.security.web.session.SessionManagementFilter@343a8b18, org.springframework.security.web.access.ExceptionTranslationFilter@1eb9ab8f, org.springframework.security.web.access.intercept.AuthorizationFilter@28ab3c60] 
+24-08-06 22:47:07.057 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+24-08-06 22:47:07.074 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '' 
+24-08-06 22:47:07.084 [main] INFO  c.a.app.ws.MobileAppWsApplication - Started MobileAppWsApplication in 3.388 seconds (process running for 3.765) 
+24-08-06 22:47:07.181 [main] ERROR c.a.app.ws.MobileAppWsApplication -  ApplicationServletEnvironment {activeProfiles=[dev], defaultProfiles=[default], propertySources=[MapPropertySource {name='server.ports'}, ConfigurationPropertySourcesPropertySource {name='configurationProperties'}, StubPropertySource {name='servletConfigInitParams'}, ServletContextPropertySource {name='servletContextInitParams'}, PropertiesPropertySource {name='systemProperties'}, OriginAwareSystemEnvironmentPropertySource {name='systemEnvironment'}, RandomValuePropertySource {name='random'}, OriginTrackedMapPropertySource {name='Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/''}, OriginTrackedMapPropertySource {name='Config resource 'class path resource [application.yml]' via location 'optional:classpath:/''},  {name='Management Server'}]}  
+24-08-06 22:47:07.475 [RMI TCP Connection(3)-192.168.1.159] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-08-06 22:47:07.475 [RMI TCP Connection(3)-192.168.1.159] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-08-06 22:47:07.476 [RMI TCP Connection(3)-192.168.1.159] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+24-08-06 22:47:15.002 [http-nio-8080-exec-7] WARN  c.a.a.w.c.JwtAuthenticationFilter - Bearer Token not exit 
+24-08-06 22:47:23.362 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - Bearer Token exit 
+24-08-06 22:47:23.362 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - Token is : eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJqb2huLmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTcyMjk2NjQzNSwiZXhwIjoxNzIzMDUyODM1fQ.OjKm48Hb00ovJW4dAZStKrPF2IGalOdf6QNI47AEl0DmAtjIfuxUPrDMt1yx11fD 
+24-08-06 22:47:23.373 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - User Email is : john.doe@example.com 
+24-08-06 22:47:23.376 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - User Details  is : com.appsdeveloperblogs.app.ws.entity.User@53ca677b 
+24-08-06 22:47:23.383 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - Is Token exist : true 
+24-08-06 22:47:23.386 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - Is Ist Step : true 
+24-08-06 22:47:23.388 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - 1 Is Auth Token: UsernamePasswordAuthenticationToken [Principal=com.appsdeveloperblogs.app.ws.entity.User@53ca677b, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[USER]] 
+24-08-06 22:47:23.388 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - 2 Is Auth Token: UsernamePasswordAuthenticationToken [Principal=com.appsdeveloperblogs.app.ws.entity.User@53ca677b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[USER]] 
+24-08-06 22:47:23.388 [http-nio-8080-exec-10] INFO  c.a.a.w.c.JwtAuthenticationFilter - 3 Is Auth Token: UsernamePasswordAuthenticationToken [Principal=com.appsdeveloperblogs.app.ws.entity.User@53ca677b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[USER]] 
