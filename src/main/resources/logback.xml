@@ -22,19 +22,19 @@
         </encoder>
     </appender>
 
-    <!--  <root level="INFO">
+      <root level="INFO">
           <appender-ref ref="myConsoleAppender"/>
           <appender-ref ref="myFileAppender"/>
-      </root>-->
+      </root>
 
-    <springProfile name="dev">
+    <springProfile name="!dev">
         <root level="INFO,DEBUG,WARN,TRACE,ERROR">
             <appender-ref ref="myConsoleAppender"/>
             <appender-ref ref="myFileAppender"/>
         </root>
     </springProfile>
 
-    <springProfile name="prod">
+    <springProfile name="!prod">
         <root level="INFO">
             <appender-ref ref="myConsoleAppender"/>
             <appender-ref ref="myFileAppender"/>
