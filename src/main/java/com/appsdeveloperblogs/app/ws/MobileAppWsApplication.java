@@ -1,5 +1,6 @@
 package com.appsdeveloperblogs.app.ws;
 
+import com.appsdeveloperblogs.app.ws.entity.User;
 import com.appsdeveloperblogs.app.ws.repository.UserRepository;
 import com.appsdeveloperblogs.app.ws.restclient.FeignReqresClient;
 import com.appsdeveloperblogs.app.ws.restclient.RestClientService;
@@ -41,13 +42,12 @@ public class MobileAppWsApplication {
             log.info("Feign Client :: {} ", feignReqresClient.getAllUsers().getBody());
             log.info("New User Create Feign  :: {} ", feignReqresClient.saveNewUsers(new Users("Ahmed Bilal", "leader")));
 
-            // log.info("calculatorClient.add(4,76) {}",calculatorClient.add(4,76));
-            //var admin = User.builder().firstname("Admin").lastname("Admin").email("admin@mail.com").password("password").userName("username").build();
+            var admin = User.builder().firstname("Admin").lastname("Admin").email("admin@mail.com").password("password").userName("username").build();
 
-            // userRepository.save(admin);
+            userRepository.save(admin);
 
 
-            // System.out.println(userRepository.findByEmail("admin@mail.com").get().getPassword());
+            System.out.println(userRepository.findByEmail("admin@mail.com").get().getPassword());
         };
     }
 }
