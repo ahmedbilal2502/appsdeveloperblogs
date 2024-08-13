@@ -1,0 +1,5 @@
+Generate Soap Classes using WSDL
+wsimport -keep -s src/main/java -d target/classes -p com.example.soapclient http://www.dneonline.com/calculator.asmx?wsdl
+
+
+

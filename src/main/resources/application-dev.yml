@@ -51,3 +51,21 @@ management:
       enabled: on
 server:
   port: 8090
+  
+  
+  
+  
+  ##############################Feign Client############
+feign:
+  httpclient:
+    disableSslValidation: true
+    enabled: true
+  okhttp:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+
+
