@@ -40,18 +40,33 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             filterChain.doFilter(request, response);
             return;
         }
+        log.info("Bearer Token exit");
         jwt = authHeader.substring(7);
+        log.info("Token is : {}", jwt);
+
         userEmail = jwtService.extractEmail(jwt);
+        log.info("User Email is : {}", userEmail);
+
         if (userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            System.out.println(userEmail);
             UserDetails userDetails = this.userDetailsService.loadUserByUsername(userEmail);
-            var isTokenValid = tokenRepository.findByToken(jwt)
-                    .map(t -> !t.isExpired() && !t.isRevoked())
-                    .orElse(false);
+            log.info("User Details  is : {}", userDetails.toString());
+
+            var isTokenValid = tokenRepository.findByToken(jwt).map(t -> !t.isExpired() && !t.isRevoked()).orElse(false);
+
+            log.info("Is Token exist : {}", isTokenValid);
+            log.info("Is Ist Step : {}", jwtService.isTokenValid(jwt, userDetails));
+
+
             if (jwtService.isTokenValid(jwt, userDetails) && isTokenValid) {
+
                 UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                log.info("1 Is Auth Token: {}", authToken.toString());
+
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                log.info("2 Is Auth Token: {}", authToken.toString());
+
                 SecurityContextHolder.getContext().setAuthentication(authToken);
+                log.info("3 Is Auth Token: {}", authToken.toString());
             }
 
         }
