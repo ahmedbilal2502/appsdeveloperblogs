@@ -27,27 +27,27 @@ public class MobileAppWsApplication {
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext context= SpringApplication.run(MobileAppWsApplication.class, args);
-        ConfigurableEnvironment configurableEnvironment=context.getEnvironment();
-        log.error(" {} ",configurableEnvironment);
+        ConfigurableApplicationContext context = SpringApplication.run(MobileAppWsApplication.class, args);
+        ConfigurableEnvironment configurableEnvironment = context.getEnvironment();
+        log.error(" {} ", configurableEnvironment);
     }
 
     @Bean
     public CommandLineRunner commandLineRunner() {
         return args -> {
-          log.info("Get User Count is :: {} ",restClientService.getAllUsers());
-          log.info("New User Create   :: {} ",restClientService.saveNewUsers(new Users("Ahmed","leader")));
+            log.info("Get User Count is :: {} ", restClientService.getAllUsers());
+            log.info("New User Create   :: {} ", restClientService.saveNewUsers(new Users("Ahmed", "leader")));
 
-          log.info("Feign Client :: {} ",feignReqresClient.getAllUsers().getBody());
-          log.info("New User Create Feign  :: {} ",feignReqresClient.saveNewUsers(new Users("Ahmed Bilal","leader")));
+            log.info("Feign Client :: {} ", feignReqresClient.getAllUsers().getBody());
+            log.info("New User Create Feign  :: {} ", feignReqresClient.saveNewUsers(new Users("Ahmed Bilal", "leader")));
 
-          // log.info("calculatorClient.add(4,76) {}",calculatorClient.add(4,76));
+            // log.info("calculatorClient.add(4,76) {}",calculatorClient.add(4,76));
             //var admin = User.builder().firstname("Admin").lastname("Admin").email("admin@mail.com").password("password").userName("username").build();
 
-           // userRepository.save(admin);
+            // userRepository.save(admin);
 
 
-           // System.out.println(userRepository.findByEmail("admin@mail.com").get().getPassword());
+            // System.out.println(userRepository.findByEmail("admin@mail.com").get().getPassword());
         };
     }
 }
